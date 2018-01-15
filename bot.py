@@ -28,7 +28,7 @@ markup_inline_payment.add(btn_in_cash, btn_in_card, btn_in_invoice)
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
-    bot.reply_to(message, "Привет! Я бот. Жми  на кнопки", reply_markup=markup_menu)
+    bot.reply_to(message, "Привет! Я супербот. Жми  на кнопки", reply_markup=markup_menu)
 
 
 @bot.message_handler(func=lambda message: True)
