@@ -53,7 +53,7 @@ def magazin_location(message):
         distance.append(result)
     index = distance.index(min(distance))
 
-    bot.send_message(message.chat.id, 'Ближайший к Вам магазин')
+    bot.send_message(message.chat.id, 'Ближайший к Вам Burger Heroes!')
     bot.send_venue(message.chat.id, const.MAGAZINS[index]['latm'], const.MAGAZINS[index]['lonm'],
                    const.MAGAZINS[index]['title'], const.MAGAZINS[index]['address'])
 
