@@ -1,20 +1,16 @@
-asn1crypto==0.24.0
-attrs==17.4.0
+# List of required packages (Dependencies)
+
+
+# Or you need not a pip package, @'...' specifies git branch
+git+https://github.com/Kylmakalle/pyTelegramBotAPI.git@feature-BotAPIV3
+
 certifi==2017.11.5
-cffi==1.11.4
 chardet==3.0.4
-cryptography==2.1.4
 geopy==1.11.0
 idna==2.6
-pyasn1==0.4.2
-pyasn1-modules==0.2.1
-pycparser==2.18
-pyOpenSSL==17.5.0
-requests==2.7.0
-service-identity==17.0.0
+pyTelegramBotAPI==3.5.1
+requests==2.18.4
 six==1.11.0
-style==1.1.0
-telebot==0.0.3
-TelegramBotAPI==0.3.2
-update==0.0.1
 urllib3==1.22
+
+
