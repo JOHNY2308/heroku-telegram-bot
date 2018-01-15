@@ -1,11 +1,15 @@
 # List of required packages (Dependencies)
 redis
 
-# If you need to specify a version
-requests==2.16.5
+certifi==2017.11.5
+chardet==3.0.4
+geopy==1.11.0
+idna==2.6
+pyTelegramBotAPI==3.5.1
+requests==2.18.4
+six==1.11.0
+urllib3==1.22
 
 # Or you need not a pip package, @'...' specifies git branch
 git+https://github.com/Kylmakalle/pyTelegramBotAPI.git@feature-BotAPIV3
 
-# Or you have .zip library
-https://site.org/files/package.zip
