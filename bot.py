@@ -28,15 +28,15 @@ markup_inline_payment.add(btn_in_cash, btn_in_card, btn_in_invoice)
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
-    bot.reply_to(message, "Здаров мудила я твой нигер", reply_markup=markup_menu)
+    bot.reply_to(message, "Привет! Я бот. Жми  на кнопки", reply_markup=markup_menu)
 
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
     if message.text == "🚗 Способы доставки":
-        bot.reply_to(message, "Хуй тебе в рот, а не доставка!", reply_markup=markup_menu)
+        bot.reply_to(message, "Курьерская доставка!", reply_markup=markup_menu)
     elif message.text == "💵 Способы оплаты":
-        bot.reply_to(message, "В наших секс-шопах доступны следующие способы оплаты ",
+        bot.reply_to(message, "Вы можете оплатить разными способами! ",
                      reply_markup=markup_inline_payment)
     else:
         bot.reply_to(message, message.text, reply_markup=markup_menu)
@@ -63,6 +63,12 @@ def call_back_payment(call):
     if call.data == 'cash':
         bot.send_message(call.message.chat.id, text="""
         Наличная оплата, производится в рублях, в кассе магазина""", reply_markup=markup_inline_payment)
+    elif call.data == 'card':
+        bot.send_message(call.message.chat.id, text="""
+        Можно оплатить картой""", reply_markup=markup_inline_payment)
+    elif call.data == 'invoice':
+        bot.send_message(call.message.chat.id, text="""
+        Можно банковским переводом""", reply_markup=markup_inline_payment)    
 
 
 bot.polling()
