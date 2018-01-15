@@ -13,7 +13,7 @@ token = os.environ['TELEGRAM_TOKEN']
 bot = telebot.TeleBot(token)
 
 markup_menu = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
-btn_address = types.KeyboardButton('🏪 Адреса магазинов', request_location=True)
+btn_address = types.KeyboardButton('🍔 Ближайший Burger Heroes', request_location=True)
 btn_payment = types.KeyboardButton('💵 Способы оплаты')
 btn_delivery = types.KeyboardButton('🚗 Способы доставки')
 markup_menu.add(btn_address, btn_payment, btn_delivery)
